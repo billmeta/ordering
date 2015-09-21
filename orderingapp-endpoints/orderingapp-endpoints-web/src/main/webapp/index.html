@@ -1,0 +1,156 @@
+<!-- 
+
+- It's a good idea to specify the class for each html element - this is NOT specifying the
+  style!  It's saying what the HTML element LOGICALLY is and then, in a separate css file, we use a CSS selector
+  to apply a style based on the class (or id, etc.)
+- Specifying the class does NOT cause the browser to go looking for a style w/ a CSS selector matching
+  that class - it ONLY provides a class name for the html element.  Its original intent was to logically specify
+  what the content is.  The idea is to not have any styling info in our HTML page.  Instead, we logically
+  define our HTML page in terms of the content, using DIV elements to define logical parts of our
+  HTML page (or some of the newer HTML5 elements for logically specifying parts of our page) and specifying the
+  class attribute for different HTML elements based, again, on its logical content.
+- We then use CSS rule sets to set one or more EXISTING HTML Element Style properties on HTML elements by
+  specifying a CSS selector that selects one or more elements based on the class attribute (or other attribute).
+  These style properties in a CSS rule set are NOT 'CSS styles' - they are style properties that are defined for
+  the HTML elements!  In other words, we could just simply avoid using CSS rule sets and just specify the style properties
+  on each specific HTML element in the HTML file (e.g. style.color=red).  This is not good practice, though.  We instead want to set the style
+  properties for the HTML elements based on the logical content (e.g. the class name we gave an HTML element specifies what
+  that HTML element logically contains or ... the DIV element specifies a logical category of content for the HTML page).
+- Note, however, that changing the style attributes of an HTML element gives us more than just what we'd normally think
+  of as styling (the way the element looks, its color, etc.).  Many of the attributes give us special effects - e.g.
+  being able to show/hide a DIV element (and all of the other HTML elements inside it) by setting the HTML style attribute,
+  'visibility', to 'hidden' or 'visible'.  Or we can change position style attributes to make it look like the html element is moving.
+
+
+- Best practice with angularJS is to have the views as html and not as JSP - we're rendering on the
+  client-side by angularJS processing its directives that are in the view (especially with the bidirectional
+  model / html element binding).  
+- Angular views should use angular directives instead of jQuery or javascript.  Angular model objects
+  are used with angular directives.  We also favor angular model objects over regular jQuery and
+  javascript objects, variables.   Reason: angular directives and model objects are used to render
+  the view.  We get automatic re-rendering of the view any time a model object changes value.
+-->
+
+<!--
+- Note that we're NOT using a <form> element - we CAN use it which is a convenience for getting the
+  data from the html elements in the <form>...</form> block and sending it to the server in an http request
+- Not using a <form> element doesn't have anything to do w/ angularJS.  It's just that when we decide not
+  to use it and to manually do our own submission of the values in the html elements, we use angularJS directives
+  instead of straight javascript.
+-->
+
+<!doctype html>
+<head>
+	<title>Employee Tracker</title>
+</head>
+
+<!-- 
+- Our shell page (this page) for angularJS has the ng-app directive - same name as the module defined in app.js 
+-->
+<body id="ng-app" ng-app="ordering-app">
+
+<!-- 
+Standard pattern for angular:
+- Add an HREF w/ # for each view - the # changes the location of the browser to go to area on same page
+	without going to the server - that's the key - we want the location to change so that angular knows
+to process it and see if a route matches to load a view but without the browser sending an http request.
+
+Note: normally, we'd provide a corresponding <a href name="view1"> for where the browser should go to
+on the page but we leave it out because we don't want that -- and browser doesn't complain.
+-->
+	<!--
+	- navbar HTML copied/pasted from bootstrap; bootstrap's CSS will select the HTML elements by class value
+	  and set the HTML's existing style properties in ways to achieve the desired effect.
+	-->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span><a></li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<!-- 
+							- ui-sref is an angular directive and it's how we change the state for ui router - look at
+							  app.routes.js - when user clicks on 'Product', the state is set to 'product' and $stateProvider
+							  (look at app.routes.js) processes it
+							- Note that prior to using 'ui router', we used ngRouter which required us to use
+							  existing html, href, set to - for example - #product.  Angularjs intercepted it and processed it.
+							-->
+							<li><a ui-sref="product">Product</a></li>
+							<li><a ui-sref="customer">Customer</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<!--
+	- AngularJS 'ui router' directive for where the view gets injected (prior to using 'ui router', we used the directive, 'ng-view')
+	-->
+	<div ui-view></div>
+	
+	</div>
+
+<!-- 
+- I arbitrarily put the 3rd-party js files in a folder, lib, that I created under the web app's root.  It's completely
+  arbitrary.  No web server gives that folder any special meaning.
+- Don't confuse 'lib' with WEB_INF/lib.  WEB-INF and WEB-INF/lib are part of the J2EE servlet specification for when
+  we're using servlet engines like tomcat.  Servlet engines will add WEB-INF/lib and WEB-INF/classes to the java
+  CLASSPATH.  We put our java jars in WEB-INF/lib and our java class files (ones that aren't in a jar) in WEB-INF/classes.
+  
+- Good idea to keep the debugger's console open - resolve all errors before continuing.  'console' tab shows errors.
+  'network' tab shows which js and css files are missing.
+- Note: Based on http header settings, the file won't be downloaded if not modified on the server (and debugger will 
+  show an http 304 response)
+- There's a difference with debuggers - e.g. I found that google chrome's debugger showed underscore-min.map 
+  missing whereas firefox's debugger did not.  
+
+- Note: easiest to use bower (package manager) to get the needed 3rd party js and css files
+- Use the non-minimized version of the js files for development and the minimized for production (note: there
+  are tools to allow debugging even with minimized js and css code but ...)
+- Include all the javascript code (angularJS, etc.) and need to be in correct order (if a file needs code
+  that's in another file, the other file needs to be included before it)
+- Put scripts inside the body - browser will still render the web page while it retrieves each of the
+  js files (you can see them being separately retrieved in the browser debugger - network tab)
+--> 
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/angular-resource/angular-resource.js"></script>
+<script src="lib/angular-sanitize/angular-sanitize.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.routes.js"></script>
+
+<script src="app/product/product.services.js"></script>
+<script src="app/product/product.routes.js"></script>
+<script src="app/product/product.controller.js"></script>
+
+<script src="app/customer/customer.services.js"></script>
+<script src="app/customer/customer.routes.js"></script>
+<script src="app/customer/customer.controller.js"></script>
+
+</body>
+</html>
+

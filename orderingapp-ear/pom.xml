@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<modelVersion>4.0.0</modelVersion>
+  
+	<parent>
+		<groupId>com.maha.orderingapp</groupId>
+		<artifactId>orderingapp-pom</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>orderingapp-ear</artifactId>
+
+	<packaging>ear</packaging>
+  
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-core</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-domain</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-services-impl</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-services-interfaces</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-repo-interfaces</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-repo-impl</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<!-- We want these wars packaged in the ear - therefore, provide them -->
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-endpoints-web</artifactId>
+			<version>${global.common.version}</version>
+			<type>war</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-endpoints-webrest</artifactId>
+			<version>${global.common.version}</version>
+			<type>war</type>
+		</dependency>		
+		
+	</dependencies>
+  
+	<build>
+		<finalName>orderingappear</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<resourcesDir>src/main/resources</resourcesDir>
+					<displayName>orderingappear</displayName>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+
+					<!--
+					- the war files will still be in the root of the EAR with the same exact name they have:
+					  orderingapp-endpoints-web-1.0-SNAPSHOT
+					  orderingapp-endpoints-webrest-1.0-SNAPSHOT.war
+					but the difference is that the contextRoot in the EAR's META-INF/application.xml will be the following w/ the default:
+						<module>
+							<web>
+								<web-uri>orderingapp-endpoints-web-1.0-SNAPSHOT.war</web-uri>
+								<context-root>/orderingapp-endpoints-web</context-root>
+							</web>
+						</module>
+						<module>
+							<web>
+								<web-uri>orderingapp-endpoints-webrest-1.0-SNAPSHOT.war</web-uri>
+								<context-root>/orderingapp-endpoints-webrest</context-root>
+							</web>
+						</module>
+						
+					and it will be the following if we modify it:
+						<module>
+							<web>
+								<web-uri>orderingapp-endpoints-web-1.0-SNAPSHOT.war</web-uri>
+								<context-root>/web</context-root>
+							</web>
+						</module>
+						<module>
+							<web>
+								<web-uri>orderingapp-endpoints-webrest-1.0-SNAPSHOT.war</web-uri>
+								<context-root>/webrest</context-root>
+							</web>
+						</module>
+					
+					-->
+
+					<modules>
+						<webModule>
+							<groupId>com.maha.orderingapp</groupId>
+							<artifactId>orderingapp-endpoints-web</artifactId>
+							<contextRoot>/web</contextRoot>
+						</webModule>
+						
+						<webModule>
+							<groupId>com.maha.orderingapp</groupId>
+							<artifactId>orderingapp-endpoints-webrest</artifactId>
+							<contextRoot>/webrest</contextRoot>
+						</webModule>
+					</modules>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 
+	- context-param is part of the J2EE servlet spec; the J2EE servlet engine (e.g. tomcat) will pass the
+	  parameter and its value to the Java class specified in the <listener>
+	- Look at <listener> - we tell J2EE servlet engine to invoke the spring object, ContextLoaderListener, and
+	  pass contextConfigLocation to it
+	- TO DO: Put root-context.xml into the EAR root instead
+	-->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+	</context-param>
+	
+	<!-- 
+	- listener is part of the J2EE servlet specification; the J2EE servlet engine (tomcat) calls this
+	  object, ContextLoaderListener(I don't know which method) and gives it the contextConfigLocation parameter
+	- By using <listener>, we hook into the J2EE servlet specification to have our Spring beans created before
+	  our application starts processing requests via REST calls to the DispatcherServlet
+	- ContextLoaderListener is a spring-provided java object that reads the spring configuration in the file
+	  pointed to by contextConfigLocation.  It creates our application spring beans (and existing spring-provided
+	  beans) based on the info in that file and adds those beans to a spring ApplicationContext object
+	- This ApplicationContext object is the root ApplicationContext object for the app (see comments below
+	  on the DispatcherServlet for the second ApplicationContext created)
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!--
+	- <servlet> is part of the J2EE servlet spec; spring provides the J2EE servlet, DispatcherServlet,
+	  that the J2EE servlet engine will map http requests to based on the <servlet-mapping> for it.
+	- DispatcherServlet is a spring-provided J2EE servlet that implements Spring's REST and MVC framework.
+	  It routes the request to our application Spring controller (REST-based controller) based on information
+	  in the spring config file for this.  In this case, servlet-context.xml
+	- DispatcherServlet process the spring framework info in servlet-context.xml and creates spring beans
+	  based on that info; the beans are added to the ApplicationContext object that spring creates for this
+	  DispatcherServlet.
+	- spring always creates an ApplicationContext object for each DispatcherServlet; if there's an existing
+	  ApplicationContext (there is - see above), it makes that the root of this one.
+	-->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<!--
+	- part of the J2EE servlet spec; it tells the servlet engine (e.g. tomcat) which J2EE servlet to
+	  route the http request to based on the pattern
+	- When we use Spring MVC & REST, we use a single J2EE servlet for all requests: Spring's DispatcherServlet.
+	  This gets us into the Spring framework.  The DispatcherServlet will then map the request to the correct
+	  Spring application controller based on the info we provide (we provide the info either in the spring
+	  config file or tell spring, via info in the spring config file for this servlet, to use one of its
+	  existing objects to scan our code, looking for annotations like '@RequestMapping' to get this info from our code)
+	-->
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+</web-app>

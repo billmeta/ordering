@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Non-J2EE web front end only but we're packaging it as WAR for convenience -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.maha.orderingapp</groupId>
+		<artifactId>orderingapp-endpoints</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>orderingapp-endpoints-webrest</artifactId>
+		
+	<packaging>war</packaging>
+	
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-core</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-domain</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-services-impl</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-services-interfaces</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-repo-interfaces</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maha.orderingapp</groupId>
+			<artifactId>orderingapp-repo-impl</artifactId>
+			<version>${global.common.version}</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<!-- We need the jars to compile the controllers but we're not packaging them in the war - instead,
+	in the ear -->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+					<warName>orderingappwebrest</warName>
+                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+	
+

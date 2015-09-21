@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Non-J2EE web front end only but we're packaging it as WAR for convenience -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.maha.orderingapp</groupId>
+		<artifactId>orderingapp-endpoints</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>orderingapp-endpoints-web</artifactId>
+		
+	<packaging>war</packaging>
+	
+	<!-- 
+	- Even though we're not compiling anything, the jars are inherited and they'll be packaged
+	in the war's lib folder unless we tell the war plugin not to
+	- We are packaging the jars in the ear's lib folder; therefore, tell war not to add them to its
+	  lib folder
+	-->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+	
+

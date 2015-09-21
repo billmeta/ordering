@@ -1,0 +1,4 @@
+com\maha\orderingapp\domain\Company.class
+com\maha\orderingapp\domain\Customer.class
+com\maha\orderingapp\domain\Product.class
+com\maha\orderingapp\domain\Order.class

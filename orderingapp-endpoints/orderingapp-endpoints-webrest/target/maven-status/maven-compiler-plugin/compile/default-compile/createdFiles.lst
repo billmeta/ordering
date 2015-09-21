@@ -1,0 +1,2 @@
+com\maha\orderingapp\endpoints\webrest\controllers\OrderingAppShellPageRestController.class
+com\maha\orderingapp\endpoints\webrest\controllers\ProductRestController.class

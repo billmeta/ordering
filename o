@@ -1,0 +1,383 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-core:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-domain:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-endpoints-web:war:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-endpoints-webrest:war:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-endpoints:pom:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-repo-interfaces:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-repo-impl:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-repo-pom:pom:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-services-interfaces:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-services-impl:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-services-pom:pom:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-ear:ear:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.maha.orderingapp:orderingapp-pom:1.0-SNAPSHOT, C:\projects\orderingapp\pom.xml, line 143, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-ear-plugin is missing. @ com.maha.orderingapp:orderingapp-ear:[unknown-version], C:\projects\orderingapp\orderingapp-ear\pom.xml, line 73, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.maha.orderingapp:orderingapp-pom:pom:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 143, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] orderingapp-pom
+[INFO] orderingapp-core
+[INFO] orderingapp-domain
+[INFO] orderingapp-endpoints
+[INFO] orderingapp-endpoints-web
+[INFO] orderingapp-repo-pom
+[INFO] orderingapp-repo-interfaces
+[INFO] orderingapp-repo-impl
+[INFO] orderingapp-services-pom
+[INFO] orderingapp-services-interfaces
+[INFO] orderingapp-services-impl
+[INFO] orderingapp-endpoints-webrest
+[INFO] orderingapp-ear
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-pom 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-pom ---
+[INFO] Installing c:\projects\orderingapp\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-pom\1.0-SNAPSHOT\orderingapp-pom-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-core 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-core ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-core\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-core ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\projects\orderingapp\orderingapp-core\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-core ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-core\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-core ---
+[INFO] Building jar: C:\projects\orderingapp\orderingapp-core\target\orderingapp-core-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-core ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-core\target\orderingapp-core-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-core\1.0-SNAPSHOT\orderingapp-core-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-core\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-core\1.0-SNAPSHOT\orderingapp-core-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-domain 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-domain ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-domain\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-domain ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-domain ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-domain\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-domain ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-domain ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-domain ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-domain ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-domain\target\orderingapp-domain-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-domain\1.0-SNAPSHOT\orderingapp-domain-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-domain\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-domain\1.0-SNAPSHOT\orderingapp-domain-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-endpoints 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-endpoints ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-endpoints\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-endpoints\1.0-SNAPSHOT\orderingapp-endpoints-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-endpoints-web 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-endpoints-web ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-endpoints-web ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-endpoints-web ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-endpoints-web ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-endpoints-web ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.1:war (default-war) @ orderingapp-endpoints-web ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [orderingapp-endpoints-web] in [C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\target\orderingapp-endpoints-web-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\src\main\webapp]
+[INFO] Webapp assembled in [532 msecs]
+[INFO] Building war: C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\target\orderingapp-endpoints-web-1.0-SNAPSHOT.war
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-endpoints-web ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\target\orderingapp-endpoints-web-1.0-SNAPSHOT.war to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-endpoints-web\1.0-SNAPSHOT\orderingapp-endpoints-web-1.0-SNAPSHOT.war
+[INFO] Installing C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-web\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-endpoints-web\1.0-SNAPSHOT\orderingapp-endpoints-web-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-repo-pom 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-repo-pom ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-repo\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-repo-pom\1.0-SNAPSHOT\orderingapp-repo-pom-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-repo-interfaces 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-repo-interfaces ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-interfaces\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-repo-interfaces ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-repo-interfaces ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-interfaces\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-repo-interfaces ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-repo-interfaces ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-repo-interfaces ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-repo-interfaces ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-interfaces\target\orderingapp-repo-interfaces-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-repo-interfaces\1.0-SNAPSHOT\orderingapp-repo-interfaces-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-interfaces\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-repo-interfaces\1.0-SNAPSHOT\orderingapp-repo-interfaces-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-repo-impl 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-repo-impl ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-repo-impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-repo-impl ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-impl\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-repo-impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-repo-impl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-repo-impl ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-repo-impl ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-impl\target\orderingapp-repo-impl-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-repo-impl\1.0-SNAPSHOT\orderingapp-repo-impl-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-repo\orderingapp-repo-impl\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-repo-impl\1.0-SNAPSHOT\orderingapp-repo-impl-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-services-pom 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-services-pom ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-services\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-services-pom\1.0-SNAPSHOT\orderingapp-services-pom-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-services-interfaces 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-services-interfaces ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-services-interfaces ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-services-interfaces ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-services-interfaces ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-services-interfaces ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-services-interfaces ---
+[INFO] Building jar: C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\target\orderingapp-services-interfaces-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-services-interfaces ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\target\orderingapp-services-interfaces-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-services-interfaces\1.0-SNAPSHOT\orderingapp-services-interfaces-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-services\orderingapp-services-interfaces\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-services-interfaces\1.0-SNAPSHOT\orderingapp-services-interfaces-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-services-impl 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-services-impl ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-services-impl ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\projects\orderingapp\orderingapp-services\orderingapp-services-impl\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ orderingapp-services-impl ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-services\orderingapp-services-impl\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ orderingapp-services-impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ orderingapp-services-impl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ orderingapp-services-impl ---
+[INFO] Building jar: C:\projects\orderingapp\orderingapp-services\orderingapp-services-impl\target\orderingapp-services-impl-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ orderingapp-services-impl ---
+[INFO] Installing C:\projects\orderingapp\orderingapp-services\orderingapp-services-impl\target\orderingapp-services-impl-1.0-SNAPSHOT.jar to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-services-impl\1.0-SNAPSHOT\orderingapp-services-impl-1.0-SNAPSHOT.jar
+[INFO] Installing C:\projects\orderingapp\orderingapp-services\orderingapp-services-impl\pom.xml to C:\Users\bl787d\.m2\repository\com\maha\orderingapp\orderingapp-services-impl\1.0-SNAPSHOT\orderingapp-services-impl-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building orderingapp-endpoints-webrest 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ orderingapp-endpoints-webrest ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-webrest\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ orderingapp-endpoints-webrest ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\projects\orderingapp\orderingapp-endpoints\orderingapp-endpoints-webrest\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[11,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[12,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[14,28] package org.codehaus.jackson does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[15,32] package org.codehaus.jackson.map does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[20,50] package org.springframework.transaction.annotation does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[31,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[32,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[61,23] cannot find symbol
+  symbol:   class HttpServletRequest
+  location: class com.bill.testproject.endpoints.ui.controllers.ProductRestController
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[62,23] cannot find symbol
+  symbol:   class HttpServletResponse
+  location: class com.bill.testproject.endpoints.ui.controllers.ProductRestController
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[11,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[12,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[14,28] package org.codehaus.jackson does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[15,32] package org.codehaus.jackson.map does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[20,50] package org.springframework.transaction.annotation does not exist
+[INFO] 14 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] orderingapp-pom .................................... SUCCESS [  0.426 s]
+[INFO] orderingapp-core ................................... SUCCESS [  2.248 s]
+[INFO] orderingapp-domain ................................. SUCCESS [  0.088 s]
+[INFO] orderingapp-endpoints .............................. SUCCESS [  0.013 s]
+[INFO] orderingapp-endpoints-web .......................... SUCCESS [  1.599 s]
+[INFO] orderingapp-repo-pom ............................... SUCCESS [  0.011 s]
+[INFO] orderingapp-repo-interfaces ........................ SUCCESS [  0.098 s]
+[INFO] orderingapp-repo-impl .............................. SUCCESS [  0.129 s]
+[INFO] orderingapp-services-pom ........................... SUCCESS [  0.013 s]
+[INFO] orderingapp-services-interfaces .................... SUCCESS [  0.311 s]
+[INFO] orderingapp-services-impl .......................... SUCCESS [  0.290 s]
+[INFO] orderingapp-endpoints-webrest ...................... FAILURE [  0.229 s]
+[INFO] orderingapp-ear .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.674 s
+[INFO] Finished at: 2015-09-21T15:17:16-04:00
+[INFO] Final Memory: 21M/163M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project orderingapp-endpoints-webrest: Compilation failure: Compilation failure:
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[11,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[12,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[14,28] package org.codehaus.jackson does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[15,32] package org.codehaus.jackson.map does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[20,50] package org.springframework.transaction.annotation does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[31,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[32,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[61,23] cannot find symbol
+[ERROR] symbol:   class HttpServletRequest
+[ERROR] location: class com.bill.testproject.endpoints.ui.controllers.ProductRestController
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/ProductRestController.java:[62,23] cannot find symbol
+[ERROR] symbol:   class HttpServletResponse
+[ERROR] location: class com.bill.testproject.endpoints.ui.controllers.ProductRestController
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[11,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[12,26] package javax.servlet.http does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[14,28] package org.codehaus.jackson does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[15,32] package org.codehaus.jackson.map does not exist
+[ERROR] /C:/projects/orderingapp/orderingapp-endpoints/orderingapp-endpoints-webrest/src/main/java/com/maha/orderingapp/endpoints/webrest/controllers/OrderingAppShellPageRestController.java:[20,50] package org.springframework.transaction.annotation does not exist
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :orderingapp-endpoints-webrest
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+	<!-- 
+	- Tells Spring to use the Spring bean (java object), DefaultAnnotationHandlerMapping, to scan our code and process @RequestMapping
+	-->
+	<mvc:annotation-driven />
+
+	<!-- 
+	- signals the current application context to apply dependency injection to non-managed classes that are instantiated 
+	  outside of the Spring bean factory (typically classes annotated with the @Configurable annotation)
+	-->
+	<context:spring-configured />
+
+	<!-- 
+	- this is used instead of <bean id=...> in the xml - this will result in spring scanning for @Repository, @Component, 
+	  @Service, and @Controller and creating beans in the ApplicationContext object.  
+	- ** It also does @Autowire processing so ... you don't need <context:annotation-config/> if you have this.
+	-->
+	<context:component-scan base-package="com.maha.orderingapp.endpoints.webrest.controllers" />
+
+</beans:beans>

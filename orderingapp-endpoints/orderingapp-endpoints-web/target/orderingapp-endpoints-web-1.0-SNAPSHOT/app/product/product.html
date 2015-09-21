@@ -1,0 +1,31 @@
+<!--
+- The logical content of this DIV - which we're using to logically categorize a part of our page - is that it has
+  html elements that allow product search input.
+- Keep in mind that although we set our class attribute value to provide logical content categories, we also use it
+  outside of this scope solely to do things like bootstrap does - we specify a class value based on the device size 
+  to leverage bootstrap's CSS.  This is not using class to specify logical content.
+-->
+<div class="productsearchinput">
+	<!--
+	- ng-model - angular directive - 'productName' is a property we added to our scope object; when it changes value,
+	  angular will re-render this html
+	-->
+	Product Name: <input type="text" name="productName" ng-model="productName" id="productName">
+	
+	<!--
+	- ng-click - angular directive - 'getProducts' is a property we added to our scope object; It's a 'controller' method 
+	  (logical controller method) because it is an event handler for the button.
+	-->
+	<button ng-click="getProducts()">Get Products</button>
+	<p>
+</div>
+
+<div class="products">
+	<ul>
+		<!--
+		- ng-repeat - angular directive - products is $scope.products that we set in the method, getProducts
+		- when $scope.products changes value, angularJS re-renders the following (I didn't add the customer data)
+		-->
+		<li ng-repeat="product in products">{{product.id}},{{product.name}}, {{product.price}}</li>
+	</ul>
+</div>

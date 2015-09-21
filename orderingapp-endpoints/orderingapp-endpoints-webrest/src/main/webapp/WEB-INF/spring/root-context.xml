@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+	<!--
+	- It's a nicer way to organize our spring bean configurations by, instead of adding the bean definitions for
+	  each jar file in this spring config file, to have separate ones for each jar file and tell Spring
+	  to use its ClassPathXmlApplicationContext to read and process those files.  
+	- As long as we put the specified spring config file into a folder in the jar file that is automatically part
+	  of the classpath, ClassPathXmlApplicationContext will be able to find it (hence the 'ClassPath' part of the
+	  name)
+	- Spring will create an ApplicationContext object and all the spring beans it creates from these files into
+	  that object.
+	-->
+	<bean class="org.springframework.context.support.ClassPathXmlApplicationContext">
+		<constructor-arg>
+			<list>
+				<value>/applicationcontext.orderingapp.services.xml</value>
+				<value>/applicationcontext.orderingapp.repo.xml</value>
+	 		</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
+

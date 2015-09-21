@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+          	   
+	<!--
+	- You don't need this if you use context:component-scan
+	<context:annotation-config/>
+	-->
+	<context:spring-configured/>
+	
+	<!--
+	- This tells Spring to use one of its existing spring beans (java object) that will do 2 things:
+	  - read our Java code, scanning for the annotations, @Component, @Service, @Resource, and create beans for them, 
+        putting them into the ApplicationContext
+	  - read our Java code and, when it finds @Autowired annotation, looks for a bean that was created and added
+	    to ApplicationContext and injects that bean into there.  The bean could have been added via scanning for
+		annotations (as in the above step) or by explicit XML (<bean id=whatever)
+	- Maven's java plugin will copy this to target/classes folder; maven's jar plugin just creates a jar from
+	  everything under target/classes.  Therefore, this xml file will be in the root folder of the jar and, therefore,
+	  part of the classpath.  This spring xml will get processed because we added it to the list of Spring XML files
+	  we give to ClassPathXmlApplicationContext )see root-context.xml in the uirest project)
+	-->
+	<context:component-scan base-package="com.maha.orderingapp.services"/>
+     
+</beans>
